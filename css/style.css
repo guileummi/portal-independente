@@ -75,6 +75,10 @@ nav a:hover {
 .menu {
     display: none;
     flex-direction: column;
+    background: #0a7a33;
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
 
 .menu:active {
@@ -270,8 +274,18 @@ footer {
     }
 }
 
+/* RESPONSIVO-Pc */
 @media screen and (min-width: 1024px) {
     #container-noticias{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .menu{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .menu-toggle{
+    display: none;
     }
 }
