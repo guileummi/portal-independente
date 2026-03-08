@@ -70,11 +70,25 @@ if(container){
     }
 }
 
-const menuToggle = document.querySelector(".menu-toggle")
+const toggle = document.querySelector(".menu-toggle")
 const menu = document.querySelector(".menu")
 
-menuToggle.addEventListener("click", function(){
-
+toggle.addEventListener("click", () => {
     menu.classList.toggle("active")
+})
+
+const dropdowns = document.querySelectorAll(".dropdown-toggle")
+
+dropdowns.forEach(item => {
+
+    item.addEventListener("click", function(e){
+
+        e.preventDefault()
+
+        const submenu = this.nextElementSibling
+
+        submenu.classList.toggle("active")
+
+    })
 
 })

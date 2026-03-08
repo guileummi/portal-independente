@@ -1,4 +1,8 @@
 /* RESET */
+:root {
+    --verde: #0a7a33;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,9 +11,12 @@
 
 /* HEADER */
 header {
-    background-color: #0a7a33;
-    color: #ffff;
+    background-color: var(--verde);
+    color: #ffffff;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header h1 {
@@ -25,7 +32,7 @@ nav ul{
 
 nav a {
     text-decoration: none;
-    color: #ffff;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -33,18 +40,23 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.submenu{
-    display:block;
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.submenu.active {
+    display: block;
 }
 
 .menu {
     display: none;
     flex-direction: column;
-    background: #0a7a33;
+    background: var(--verde);
+    align-items: center;
     position: absolute;
     width: 100%;
     left: 0;
-    padding-left: 21px;
 }
 
 .menu.active {
@@ -52,6 +64,7 @@ nav a:hover {
 }
 
 .menu-toggle {
+    color: #ffffff;
     font-size: 24px;
     background: none;
     border: none;
@@ -61,7 +74,7 @@ nav a:hover {
 /* CARDS */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -72,21 +85,21 @@ body {
 }
 
 .banner h2 {
-    color: #0a7a33;
+    color: var(--verde);
     margin-bottom: 10px;
 }
 
 .proximo-jogo {
-    background-color: #ffff;
+    background-color: #ffffff;
     margin: 30px;
     padding: 20px;
     border-left: 5px solid #0a7a33;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .proximo-jogo:hover {
     border-left: 20px solid #0a7a33;
-    transition: 0.3s;
 }
 
 .noticias {
@@ -95,7 +108,7 @@ body {
 
 .noticias h2, .elenco h2, .tecnica h2 {
     margin-bottom: 20px;
-    color: #0a7a33;
+    color: var(--verde);
 }
 
 #container-noticias {
@@ -106,7 +119,7 @@ body {
 }
 
 .card {
-    background-color: #ffff;
+    background-color: #ffffff;
     width: 100%;
     padding: 15px;
     border-radius: 8px;
@@ -122,7 +135,7 @@ body {
 .card h3 {
     padding: 10px;
     margin: 0;
-    color: #0a7a33;
+    color: var(--verde);
 }
 
 .card p {
@@ -150,7 +163,7 @@ body {
 }
 
 .card-jogador, .card-tecnica {
-    background-color: #ffff;
+    background-color: #ffffff;
     width: 250px;
     padding: 20px;
     border-radius: 10px;
@@ -171,7 +184,7 @@ body {
 }
 
 .card-jogador h3, .card-tecnica h3 {
-    color: #0a7a33;
+    color: var(--verde);
     margin-bottom: 5px;
 }
 
@@ -184,7 +197,7 @@ body {
 main {
     min-width: 300px;
     max-width: 1000px;
-    background-color: white;
+    background-color: #ffffff;
     margin: auto;
     padding: 20px;
     margin-bottom: 30px;
@@ -194,7 +207,7 @@ main {
 }
 
 main h2 {
-    color: #0a7a33;
+    color: var(--verde);
     font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 8px;
@@ -209,7 +222,7 @@ main p {
 }
 
 main strong {
-    color: #0a7a33;
+    color: var(--verde);
     font-weight: bold;
 }
 
@@ -220,14 +233,14 @@ main ol {
 
 .redes a{
     font-size: 24px;
-    color: white;
+    color: #ffffff;
     margin: 10px;
 }
 
 /* FOOTER */
 footer {
-    background-color: #0a7a33;
-    color: #ffff;
+    background-color: var(--verde);
+    color: #ffffff;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
@@ -247,21 +260,19 @@ footer {
     }
 
     nav ul{
-        list-style: none;
         display: flex;
         gap: 20px;
     }
 
     .dropdown {
         position: relative;
-        padding-bottom: 10px;
     }
 
     .submenu {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #ffff;
+        background-color: #ffffff;
         border-radius: 15px;
         list-style: none;
         padding: 20px;
@@ -278,7 +289,7 @@ footer {
     }
 
     .submenu a {
-        color: #0a7a33;
+        color: var(--verde);
         text-decoration: none;
         font-weight: bold;
     }
@@ -294,6 +305,7 @@ footer {
     .menu{
         display: flex;
         flex-direction: row;
+        padding-left: 21px;
     }
 
     .menu-toggle{
